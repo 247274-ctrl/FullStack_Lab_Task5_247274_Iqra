@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 05 — The Seats</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <!-- Replace “Your Place” and the header colour using the teacher's digit table. -->
+    <div class="header-inner">
+      <p class="eyebrow">LAB 05 · THE DOM AND A FORM</p>
+      <h1>Your Place</h1>
+      <p class="subtitle">Seat allocation hall</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel intro-panel" aria-labelledby="hall-title">
+      <div>
+        <p class="section-kicker">WELCOME</p>
+        <h2 id="hall-title">Choose a seat</h2>
+        <p class="muted">Enter a name and the number of seats, then select the first empty seat in the block.</p>
+      </div>
+      <div class="free-card" aria-live="polite">
+        <span class="free-number" id="free">8</span>
+        <span class="free-label">Free seats</span>
+      </div>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite">Welcome! Choose a name, a seat count, and an empty seat.</p>
+
+    <section class="panel controls" aria-label="Seat details">
+      <div class="field">
+        <label for="who">Name</label>
+        <input id="who" name="who" type="text" placeholder="e.g. Ali" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="many">Number of seats</label>
+        <input id="many" name="many" type="text" inputmode="numeric" placeholder="e.g. 3" autocomplete="off">
+      </div>
+      <p class="help-text">A block must fit entirely in empty seats. A filled seat can be clicked to free only that seat.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="seats-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">THE HALL</p>
+          <h2 id="seats-title">Available seats</h2>
+        </div>
+        <div class="legend"><span class="legend-dot empty-dot"></span> Empty <span class="legend-dot taken-dot"></span> Taken</div>
+      </div>
+      <div id="hall" class="hall" aria-label="Eight seats">
+        <button class="seat" id="seat-1" data-n="1" type="button" aria-label="Seat 1"><span>1</span></button>
+        <button class="seat" id="seat-2" data-n="2" type="button" aria-label="Seat 2"><span>2</span></button>
+        <button class="seat" id="seat-3" data-n="3" type="button" aria-label="Seat 3"><span>3</span></button>
+        <button class="seat" id="seat-4" data-n="4" type="button" aria-label="Seat 4"><span>4</span></button>
+        <button class="seat" id="seat-5" data-n="5" type="button" aria-label="Seat 5"><span>5</span></button>
+        <button class="seat" id="seat-6" data-n="6" type="button" aria-label="Seat 6"><span>6</span></button>
+        <button class="seat" id="seat-7" data-n="7" type="button" aria-label="Seat 7"><span>7</span></button>
+        <button class="seat" id="seat-8" data-n="8" type="button" aria-label="Seat 8"><span>8</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>BSCS-F24-A · Lab 05</span>
+    <span>Roll No: 247274</span>
+  </footer>
+</body>
+</html>
